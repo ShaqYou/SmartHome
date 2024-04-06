@@ -5,6 +5,18 @@ package lighting;
 //Defining lighting service, then the RPC method the service have
 
 service Lighting{
-    
+
+    //Defining three methods for lighting service
+
+    // RPC method to turn the lights on or off.
+    rpc TurnOnOffLighting(TurnOnOffRequest) returns (TurnOnOffLightingResponse);
+
+    // RPC method to adjust the brightness level of the lights.
+    rpc AdjustBrightness(AdjustBrightnessRequest) returns (AdjustBrightnessResponse);
+
+    // RPC method to schedule lighting operations.
+    rpc ScheduleLighting(ScheduleLightingRequest) returns (ScheduleLightingResponse);
+
 }
+
 
