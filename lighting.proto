@@ -1,0 +1,10 @@
+syntax= "proto3"
+
+package lighting;
+
+//Defining lighting service, then the RPC method the service have
+
+service Lighting{
+    
+}
+
