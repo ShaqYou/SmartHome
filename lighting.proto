@@ -20,3 +20,36 @@ service Lighting{
 }
 
 
+// Request message for turning the lights on or off.
+message TurnOnOffLightsRequest {
+    bool isTurnedOn = 1; // Indicates whether the lights should be turned on or off.
+}
+
+// Response message for turning the lights on or off.
+message TurnOnOffLightsResponse {
+    string status = 1; // Status of the operation.
+}
+
+// Request message for adjusting the brightness level of the lights.
+message AdjustBrightnessRequest {
+    int32 brightnessLevel = 1; // Desired brightness level.
+}
+
+// Response message for adjusting the brightness level of the lights.
+message AdjustBrightnessResponse {
+    string status = 1; // Status of the operation.
+}
+
+// Request message for scheduling lighting operations.
+message ScheduleLightingRequest {
+    //Repeated used to indicate schedule can contain several values
+    repeated string schedule = 1; // Schedule for lighting operations.
+}
+
+// Response message for scheduling lighting operations.
+message ScheduleLightingResponse {
+    string status = 1; // Status of the operation.
+}
+
+
+
