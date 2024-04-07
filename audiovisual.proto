@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package audiovisual;
+
+// Service definition for audiovisual control.
+service AudioVisual {
+    // RPC method for controlling television power.
+    rpc ControlTelevision(ControlTelevisionRequest) returns (ControlTelevisionResponse);
+
+    // RPC method for scheduled media playback.
+    rpc ScheduledPlay(ScheduledPlayRequest) returns (ScheduledPlayResponse);
+
+    // RPC method for voice control of audiovisual devices.
+    rpc VoiceControl(VoiceControlRequest) returns (VoiceControlResponse);
+}
