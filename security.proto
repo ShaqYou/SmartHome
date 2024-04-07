@@ -11,3 +11,36 @@ service Security {
     // RPC method for remotely locking or unlocking doors.
     rpc RemoteLocking(RemoteLockingRequest) returns (RemoteLockingResponse);
 }
+
+// Request message for remotely locking or unlocking doors.
+message RemoteLockingRequest {
+    // Indicates whether the door should be locked true or unlocked false.
+    bool isLocked = 1;
+
+    // ID of the door or lock device, if applicable.
+    string deviceId = 2;
+}
+
+// Response message for remote locking or unlocking.
+message RemoteLockingResponse {
+    // Status message indicating the outcome of the remote locking operation.
+    string status = 1;
+}
+
+// Request message for video surveillance.
+message VideoSurveillanceRequest {
+    // ID of the camera device for surveillance, if applicable.
+    string cameraId = 1;
+
+    // Duration of the surveillance in seconds.
+    int32 durationSeconds = 2;
+}
+
+// Response message for video surveillance.
+message VideoSurveillanceResponse {
+    // URL or identifier of the recorded video footage, if available.
+    string videoUrl = 1;
+
+    // Status message indicating the outcome of the video surveillance operation.
+    string status = 2;
+}
