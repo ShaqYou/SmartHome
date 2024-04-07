@@ -13,3 +13,40 @@ service AudioVisual {
     // RPC method for voice control of audiovisual devices.
     rpc VoiceControl(VoiceControlRequest) returns (VoiceControlResponse);
 }
+
+
+// Request message for controlling television power.
+message ControlTelevisionRequest {
+    // Indicates whether the television should be turned on (true) or off (false).
+    bool isTurnedOn = 1;
+}
+
+// Response message for controlling television power.
+message ControlTelevisionResponse {
+    // Status message indicating the outcome of the television control operation.
+    string status = 1;
+}
+
+// Request message for scheduled media playback.
+message ScheduledPlayRequest {
+    // Media content to be played.
+    string mediaContent = 1;
+}
+
+// Response message for scheduled media playback.
+message ScheduledPlayResponse {
+    // Status message indicating the outcome of the scheduled playback operation.
+    string status = 1;
+}
+
+// Request message for voice control of audiovisual devices.
+message VoiceControlRequest {
+    // Voice command to be executed.
+    string command = 1;
+}
+
+// Response message for voice control of audiovisual devices.
+message VoiceControlResponse {
+    // Status message indicating the outcome of the voice control operation.
+    string status = 1;
+}
