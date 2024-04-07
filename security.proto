@@ -3,4 +3,11 @@ syntax = "proto3";
 package security;
 
 service Security {
+    //Defining two methods for Security service
+
+     // RPC method for video surveillance.
+    rpc VideoSurveillance(VideoSurveillanceRequest) returns (VideoSurveillanceResponse);
+
+    // RPC method for remotely locking or unlocking doors.
+    rpc RemoteLocking(RemoteLockingRequest) returns (RemoteLockingResponse);
 }
